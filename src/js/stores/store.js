@@ -1,6 +1,5 @@
 import {dispatch, register} from "../dispatchers/app-dispatcher";
 import AppConstants from "../constants/app-constants";
-import AppActions from "../action/app-actions";
 import {EventEmitter} from "events"; // from node
 
 const CHANGE_EVENT = "change"; // Value that we gonna broadcast every time there is a change
@@ -54,7 +53,6 @@ const _cartTotals = ( qty = 0, total = 0 ) => {
   return {qty, total};
 };
 
-
 const AppStore = Object.assign(EventEmitter.prototype, {
   emitChange () {
     this.emit(CHANGE_EVENT);
@@ -86,7 +84,7 @@ const AppStore = Object.assign(EventEmitter.prototype, {
     switch (action.actionType) {
       case AppConstants.ADD_ITEM:
         _addItem(action.item);
-
+        break;
       case AppConstants.REMOVE_ITEM:
         _removeItem( action.item );
         break;
