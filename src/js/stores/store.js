@@ -76,6 +76,10 @@ const AppStore = Object.assign(EventEmitter.prototype, {
     });
   },
 
+  getCatalogItem(itemId) {
+    return _catalog.find(item => item.id === itemId);
+  },
+
   getCartTotals () {
     return _cartTotals();
   },

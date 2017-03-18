@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "react-router/lib/Link";
 import AppStore from "../../stores/store";
 import CartItem from "./app-cart-item";
 import StoreWatchMixin from "../../mixin/StoreWatchMixin";
@@ -42,6 +43,7 @@ const Cart = (props) => {
         </tr>
         </tfoot>
       </table>
+      <Link to="/">Continue Shopping</Link>
     </div>
   );
 }
