@@ -1,7 +1,7 @@
 import React from "react";
-import AppStore from "../stores/store";
+import AppStore from "../../stores/store";
 import CartItem from "./app-cart-item";
-import StoreWatchMixin from "../mixin/StoreWatchMixin";
+import StoreWatchMixin from "../../mixin/StoreWatchMixin";
 
 function getCartItems() {
   return {items: AppStore.getCart()};

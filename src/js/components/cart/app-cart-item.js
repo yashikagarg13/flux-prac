@@ -1,5 +1,5 @@
 import React from "react";
-import AppActions from "../action/app-actions";
+import AppActions from "../../action/app-actions";
 import CartButton from "./app-cart-button";
 
 class CartItem extends React.Component {

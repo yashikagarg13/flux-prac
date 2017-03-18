@@ -1,16 +1,22 @@
 import React from "react";
-import AppActions from "../action/app-actions";
+import {Router, Route, IndexRoute, browserHistory} from "react-router";
 
-import Catalog from "./app-catalog";
-import Cart from "./app-cart";
+import Catalog from "./catalog/app-catalog";
+import Cart from "./cart/app-cart";
 
-export default class App extends React.Component {
-  render () {
-    return (
-      <div className="container">
-        <Catalog />
-        <Cart />
-      </div>
-    );
-  }
-}
+import Template from "./template";
+
+const getRoutes = () => (
+  <Route component={Template}>
+    <Route path="/" component={Catalog} />
+    <Route path="cart" component={Cart}></Route>
+  </Route>
+);
+
+export default () => {
+  return (
+    <Router history={browserHistory}>
+      {getRoutes()}
+    </Router>
+  );
+};

@@ -1,6 +1,6 @@
 import React from "react";
-import AppActions from "../action/app-actions";
-import CartButton from "./app-cart-button";
+import AppActions from "../../action/app-actions";
+import CartButton from "../cart/app-cart-button";
 
 const CatalogItem = (props) => {
   return (

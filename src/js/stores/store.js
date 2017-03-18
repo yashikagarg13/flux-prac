@@ -62,7 +62,7 @@ const AppStore = Object.assign(EventEmitter.prototype, {
     this.on(CHANGE_EVENT, callback);
   },
 
-  removehangeListener (callback) {
+  removeChangeListener (callback) {
     this.removeListener(CHANGE_EVENT, callback);
   },
 
